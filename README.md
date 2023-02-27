@@ -1,1 +1,1 @@
-Nova versão marcadordetruco.com.br
+Nova versão do [Marcador de Truco Online](https://www.marcadordetruco.com.br)
