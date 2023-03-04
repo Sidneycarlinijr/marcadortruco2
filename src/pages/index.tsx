@@ -25,6 +25,7 @@ const CenteredDiv = styled.div`
 
 const Top = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   flex: 1;
 `
@@ -48,6 +49,14 @@ const HomeButton = styled.button`
   boxShadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
 `
 
+const TopFirstDiv = styled.div`
+  display: flex;
+  flex: none;
+  height: 50px;
+  width: 100%;
+  align-items: flex-end;
+`
+
 class Home extends Component {
   render() {
     return (
@@ -55,7 +64,7 @@ class Home extends Component {
         <HomeContainer>
           <CenteredDiv>
             <Top>
-              <div style={{ display: 'flex', flex: 'none', height: '50px', width: '100%', alignItems: 'flex-end' }}>
+              <TopFirstDiv>
                 <div style={{ display: 'flex', justifyContent: 'center', flex: 1,  }}>
                   <Image src={Spades} alt="spades" width={18} height={23}/>
                 </div>
@@ -66,9 +75,19 @@ class Home extends Component {
                 <div style={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
                   <Image src={Heart} alt="heart" width={20} height={20}/>
                 </div>
-              </div>
-              <div style={{ flex: '1' }}>
-
+              </TopFirstDiv>
+              <div style={{ flex: '1', display: 'flex', marginTop: '1rem' }}>
+                <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingLeft: '2rem' }}>
+                  <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderLeft: '1px solid #D9B165' }}></div>
+                </div>
+                <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'center', width: '5rem' }}>
+                  <div>a</div>
+                  <div>b</div>
+                  <div>c</div>
+                </div>
+                <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingRight: '2rem' }}>
+                  <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderRight: '1px solid #D9B165' }}></div>
+                </div>
               </div>
             </Top>
             <Mid>
