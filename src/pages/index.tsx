@@ -17,7 +17,7 @@ const HomeContainer = styled.div`
 const CenteredDiv = styled.div`
   background: linear-gradient(#175A5F, #0E4150, #062B41, #042941);
   width: 30rem;
-  height: 35rem;
+  height: 45rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +76,7 @@ class Home extends Component {
                   <Image src={Heart} alt="heart" width={20} height={20}/>
                 </div>
               </TopFirstDiv>
-              <div style={{ flex: '1', display: 'flex', marginTop: '1rem' }}>
+              <div style={{ flex: '1', display: 'flex', marginTop: '2.5rem' }}>
                 <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingLeft: '2rem' }}>
                   <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderLeft: '1px solid #D9B165' }}></div>
                 </div>
