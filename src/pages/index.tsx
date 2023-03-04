@@ -1,5 +1,9 @@
+import Image from 'next/image';
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Clown from '../styles/assets/clown.svg'
+import Spades from '../styles/assets/spades.png'
+import Heart from '../styles/assets/heart.png'
 
 const HomeContainer = styled.div`
   display: flex;
@@ -20,6 +24,8 @@ const CenteredDiv = styled.div`
 `;
 
 const Top = styled.div`
+  display: flex;
+  width: 100%;
   flex: 1;
 `
 const Mid = styled.div`
@@ -48,8 +54,26 @@ class Home extends Component {
       <div>
         <HomeContainer>
           <CenteredDiv>
-            <Top>a</Top>
-            <Mid>b</Mid>
+            <Top>
+              <div style={{ display: 'flex', flex: 'none', height: '50px', width: '100%', alignItems: 'flex-end' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', flex: 1,  }}>
+                  <Image src={Spades} alt="spades" width={18} height={23}/>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-end', flex: 'none', width: '45%', height: '100%', marginBottom: '0.5rem' }}>
+                  <hr style={{border: '0.5px solid #D9B165', width: '100%'}}>
+                  </hr>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
+                  <Image src={Heart} alt="heart" width={20} height={20}/>
+                </div>
+              </div>
+              <div style={{ flex: '1' }}>
+
+              </div>
+            </Top>
+            <Mid>
+              <Image width={215} height={250} src={Clown} alt={'centerImg'}/>
+            </Mid>
             <Bot>
               <HomeButton>
                 <p style={{ color: '#523D14', fontSize: '18px' }}>NOVO MARCADOR</p>
