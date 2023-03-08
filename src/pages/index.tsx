@@ -23,6 +23,12 @@ const CenteredDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    height: 100vh;
+    width: 100vh;
+  }
+  
 `;
 
 const Top = styled.div`
