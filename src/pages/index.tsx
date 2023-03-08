@@ -25,7 +25,7 @@ const CenteredDiv = styled.div`
   align-items: center;
 
   @media (max-width: 768px) {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
   }
   
