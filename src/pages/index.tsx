@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set the height to the full viewport height */
+  height: 100vh;
   width: 100vw;
   background-color: #202124
 `;
