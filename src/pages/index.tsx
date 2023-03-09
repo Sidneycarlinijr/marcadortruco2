@@ -55,6 +55,12 @@ const Bot = styled.div`
   height: 25%;
   justify-content: center;
   gap: 30px;
+
+  @media (max-height: 700px) {
+    position: relative;
+    bottom: 15px;
+    gap: 15px;
+  }
 `
 const HomeButton = styled.button`
   width: 20rem;
@@ -63,7 +69,11 @@ const HomeButton = styled.button`
   border: solid 3px #A27946;
   border-radius: 10px;
   cursor: pointer;
-  boxShadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
+  boxShadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  @media (max-height: 700px) {
+    width: 18rem;
+  }
 `
 
 const TopFirstDiv = styled.div`
