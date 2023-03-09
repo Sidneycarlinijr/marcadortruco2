@@ -13,7 +13,13 @@ const HomeContainer = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #202124
+  background-color: #202124;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const CenteredDiv = styled.div`
@@ -29,7 +35,6 @@ const CenteredDiv = styled.div`
     height: 100%;
     width: 100%;
   }
-  
 `;
 
 const Top = styled.div`
