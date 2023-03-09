@@ -42,6 +42,10 @@ const Top = styled.div`
   width: 100%;
   height: 35%;
   flex: none;
+
+  @media (max-width: 768px) {
+    height: 35%
+  }
 `
 const Mid = styled.div`
   flex: 1;
@@ -79,10 +83,75 @@ const HomeButton = styled.button`
 const TopFirstDiv = styled.div`
   display: flex;
   flex: none;
-  height: 50px;
+  height: 3rem;
   width: 100%;
   align-items: flex-end;
+
+  // @media (max-width: 768px) {
+  //   height: 2rem;
+  // }
 `
+
+const SpadesCenteredFlexDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+`;
+
+const LineOnCenterDiv = styled.div`
+  display: flex;
+  align-items: flex-end;
+  flex: none;
+  width: 45%;
+  height: 100%;
+  margin-bottom: 0.5rem;
+`;
+
+const Hr = styled.hr`
+  border: 1px solid #D9B165;
+  width: 100%;
+`;
+
+const HeartsContainerFlexDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+`;
+
+const CenterDivWithClubs = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  width: 100%;
+  position: relative;
+  bottom: 0.29rem;
+`;
+
+const DivWithText = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+  color: #D9B165;
+`;
+
+const ClubsImageContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0.4rem;
+`;
+
+const CardTitle = styled.h2`
+  font-size: 3rem;
+  color: #D9B165;
+  font-weight: normal;
+`;
+
+const CardDiamondsContainer = styled.div`
+  margin-top: 0.5rem;
+`;
 
 class Home extends Component {
   render() {
@@ -92,35 +161,34 @@ class Home extends Component {
           <CenteredDiv>
             <Top>
               <TopFirstDiv>
-                <div style={{ display: 'flex', justifyContent: 'center', flex: 1,  }}>
-                  <Image src={Spades} alt="spades" width={18} height={23}/>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'flex-end', flex: 'none', width: '45%', height: '100%', marginBottom: '0.5rem' }}>
-                  <hr style={{border: '1px solid #D9B165', width: '100%'}}>
-                  </hr>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
+                <SpadesCenteredFlexDiv>
+                  <Image src={Spades} alt="spades" width={18} height={23} />
+                </SpadesCenteredFlexDiv>
+                <LineOnCenterDiv>
+                  <Hr />
+                </LineOnCenterDiv>
+                <HeartsContainerFlexDiv>
                   <Image src={Hearts} alt="hearts" width={20} height={20}/>
-                </div>
+                </HeartsContainerFlexDiv>
               </TopFirstDiv>
               <div style={{ flex: '1', display: 'flex', marginTop: '2.5rem' }}>
                 <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingLeft: '2rem' }}>
                   <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderLeft: '1px solid #D9B165' }}></div>
                 </div>
                 <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'flex-start', width: '5rem' }}>
-                  <div style={{ flex: 'none', display: 'flex', justifyContent: 'center', height: '2rem', width: '100%', position: 'relative', bottom: '0.29rem'}}>
-                    <div style={{ flex: '1', display: 'flex', justifyContent: 'center', fontSize: '8px', color: '#D9B165' }}>00</div>
-                    <div style={{ flex: '1', display: 'flex', justifyContent: 'center', position: 'relative', bottom: '0.4rem' }}>
-                      <Image src={Clubs} alt="cardOfClubs"/>
-                    </div>
-                    <div style={{ flex: '1', display: 'flex', justifyContent: 'center', fontSize: '8px', color: '#D9B165' }}>12</div>
-                  </div>
-                  <div>
-                    <h2 style={{ fontSize: '3rem', color: '#D9B165', fontWeight: 'normal' }}>TRUCO</h2>
-                  </div>
-                  <div style={{ marginTop: '0.5rem'}}>
-                    <Image src={Diamonds} alt="diamonds"/>
-                  </div>
+                <CenterDivWithClubs>
+                  <DivWithText>00</DivWithText>
+                  <ClubsImageContainer>
+                    <Image src={Clubs} alt="cardOfClubs" />
+                  </ClubsImageContainer>
+                  <DivWithText>12</DivWithText>
+                </CenterDivWithClubs>
+                <div>
+                  <CardTitle>TRUCO</CardTitle>
+                </div>
+                <CardDiamondsContainer>
+                  <Image src={Diamonds} alt="diamonds" />
+                </CardDiamondsContainer>
                 </div>
                 <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingRight: '2rem' }}>
                   <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderRight: '1px solid #D9B165' }}></div>
