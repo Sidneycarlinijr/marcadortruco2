@@ -44,7 +44,7 @@ const Top = styled.div`
   flex: none;
 
   @media (max-width: 768px) {
-    height: 35%
+    height: 30%
   }
 `
 const Mid = styled.div`
@@ -62,8 +62,8 @@ const Bot = styled.div`
 
   @media (max-height: 700px) {
     position: relative;
-    bottom: 15px;
-    gap: 15px;
+    bottom: 2.3rem;
+    gap: 1rem;
   }
 `
 const HomeButton = styled.button`
@@ -87,9 +87,21 @@ const TopFirstDiv = styled.div`
   width: 100%;
   align-items: flex-end;
 
-  // @media (max-width: 768px) {
-  //   height: 2rem;
-  // }
+  @media (max-width: 768px) {
+    height: 2.5rem;
+  }
+`
+
+const TopSecondDiv = styled.div`
+  flex: 1;
+  display: flex;
+  margin-top: 2.5rem;
+
+  @media (max-width: 768px) {
+    flex: none;
+    height: 6rem;
+    margin-top: 1.5rem;
+  }
 `
 
 const SpadesCenteredFlexDiv = styled.div`
@@ -97,6 +109,15 @@ const SpadesCenteredFlexDiv = styled.div`
   justify-content: center;
   flex: 1;
 `;
+
+const MiddleFlexDiv = styled.div`
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 5rem;
+`
 
 const LineOnCenterDiv = styled.div`
   display: flex;
@@ -153,6 +174,40 @@ const CardDiamondsContainer = styled.div`
   margin-top: 0.5rem;
 `;
 
+const RightBorderOnlyFlexContainer = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2rem;
+`;
+
+const RightDivider = styled.div`
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #D9B165;
+  border-right: 1px solid #D9B165;
+`;
+
+const LeftBorderOnlyFlexContainer = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2rem;
+`;
+
+const LeftDivider = styled.div`
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #D9B165;
+  border-left: 1px solid #D9B165;
+`;
+
+const ButtonText = styled.p`
+  color: #523D14;
+  font-size: 18px;
+`;
 class Home extends Component {
   render() {
     return (
@@ -171,39 +226,39 @@ class Home extends Component {
                   <Image src={Hearts} alt="hearts" width={20} height={20}/>
                 </HeartsContainerFlexDiv>
               </TopFirstDiv>
-              <div style={{ flex: '1', display: 'flex', marginTop: '2.5rem' }}>
-                <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingLeft: '2rem' }}>
-                  <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderLeft: '1px solid #D9B165' }}></div>
-                </div>
-                <div style={{ flex: 'none', display: 'flex', flexDirection: 'column', alignItems:'center', justifyContent: 'flex-start', width: '5rem' }}>
-                <CenterDivWithClubs>
-                  <DivWithText>00</DivWithText>
-                  <ClubsImageContainer>
-                    <Image src={Clubs} alt="cardOfClubs" />
-                  </ClubsImageContainer>
-                  <DivWithText>12</DivWithText>
-                </CenterDivWithClubs>
-                <div>
-                  <CardTitle>TRUCO</CardTitle>
-                </div>
-                <CardDiamondsContainer>
-                  <Image src={Diamonds} alt="diamonds" />
-                </CardDiamondsContainer>
-                </div>
-                <div style={{ flex: '1', display: 'flex', alignItems:'center', justifyContent: 'center', paddingRight: '2rem' }}>
-                  <div style={{ width: '100%', height: '100%', borderTop: '1px solid #D9B165', borderRight: '1px solid #D9B165' }}></div>
-                </div>
-              </div>
+              <TopSecondDiv>
+                <LeftBorderOnlyFlexContainer>
+                  <LeftDivider />
+                </LeftBorderOnlyFlexContainer>
+                <MiddleFlexDiv>
+                  <CenterDivWithClubs>
+                    <DivWithText>00</DivWithText>
+                      <ClubsImageContainer>
+                        <Image src={Clubs} alt="cardOfClubs" />
+                      </ClubsImageContainer>
+                    <DivWithText>12</DivWithText>
+                  </CenterDivWithClubs>
+                  <div>
+                    <CardTitle>TRUCO</CardTitle>
+                  </div>
+                  <CardDiamondsContainer>
+                    <Image src={Diamonds} alt="diamonds" />
+                  </CardDiamondsContainer>
+                </MiddleFlexDiv>
+                <RightBorderOnlyFlexContainer>
+                  <RightDivider />
+                </RightBorderOnlyFlexContainer>
+              </TopSecondDiv>
             </Top>
             <Mid>
               <Image width={240} height={280} src={Clown} alt={'centerImg'}/>
             </Mid>
             <Bot>
               <HomeButton>
-                <p style={{ color: '#523D14', fontSize: '18px' }}>NOVO MARCADOR</p>
+                <ButtonText>NOVO MARCADOR</ButtonText>
               </HomeButton>
               <HomeButton>
-                <p style={{ color: '#523D14', fontSize: '18px' }}>ENTRAR EM SALA EXISTENTE</p>
+                <ButtonText>ENTRAR EM SALA EXISTENTE</ButtonText>
               </HomeButton>
             </Bot>
           </CenteredDiv>
