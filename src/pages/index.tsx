@@ -15,7 +15,7 @@ const HomeContainer = styled.div`
   width: 100vw;
   background-color: #202124;
 
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -30,7 +30,7 @@ const CenteredDiv = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     height: 100%;
     width: 100%;
   }
@@ -43,7 +43,7 @@ const Top = styled.div`
   height: 35%;
   flex: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     height: 30%
   }
 `
@@ -62,7 +62,7 @@ const Bot = styled.div`
 
   @media (max-height: 700px) {
     position: relative;
-    bottom: 2.3rem;
+    bottom: 1.75rem;
     gap: 1rem;
   }
 `
@@ -87,7 +87,7 @@ const TopFirstDiv = styled.div`
   width: 100%;
   align-items: flex-end;
 
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     height: 2.5rem;
   }
 `
@@ -97,7 +97,7 @@ const TopSecondDiv = styled.div`
   display: flex;
   margin-top: 2.5rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 750px) {
     flex: none;
     height: 6rem;
     margin-top: 1.5rem;
