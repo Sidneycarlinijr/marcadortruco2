@@ -105,6 +105,9 @@ const QuantityOfTeamPointsDiv = styled.div`
 `
 
 const TeamNameInput = styled.input`
+    background: transparent;
+    border: none;
+    color: #D9B165;
 `
 
 class GameScorer extends Component {
@@ -115,7 +118,7 @@ class GameScorer extends Component {
           <CenteredDiv>
             <FlexScoreDiv>
                 <TeamNameTextDiv>
-                    <TeamNameInput/>
+                    <TeamNameInput placeholder='teste'/>
                 </TeamNameTextDiv>
                 <QuantityOfTeamPointsDiv>
                     <ScoreNumber>12</ScoreNumber>
