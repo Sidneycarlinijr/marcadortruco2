@@ -6,6 +6,7 @@ import Spades from '../styles/assets/spades.png'
 import Hearts from '../styles/assets/hearts.png'
 import Clubs from '../styles/assets/clubs.png'
 import Diamonds from '../styles/assets/diamonds.png'
+import Link from 'next/link';
 
 const HomeContainer = styled.div`
   display: flex;
@@ -254,9 +255,11 @@ class Home extends Component {
               <Image width={240} height={280} src={Clown} alt={'centerImg'}/>
             </Mid>
             <Bot>
-              <HomeButton>
-                <ButtonText>NOVO MARCADOR</ButtonText>
-              </HomeButton>
+              <Link href="/gameScorer">
+                <HomeButton>
+                  <ButtonText>NOVO MARCADOR</ButtonText>
+                </HomeButton>
+              </Link>
               <HomeButton>
                 <ButtonText>ENTRAR EM SALA EXISTENTE</ButtonText>
               </HomeButton>
